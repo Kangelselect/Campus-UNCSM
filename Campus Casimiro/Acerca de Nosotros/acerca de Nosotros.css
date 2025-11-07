@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f8f9fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #004b8d;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h2, h3 {
+  color: #004b8d;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #004b8d;
+  color: white;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Estilo base para el enlace */
+.link-animado {
+  color: #333; /* Color original del texto, ajústalo al tuyo */
+  text-decoration: none; /* Le quita el subrayado feo por defecto */
+  position: relative; /* Necesario para el efecto de subrayado */
+  padding-bottom: 5px; /* Pequeño espacio para la línea */
+}
+
+/* Línea de subrayado (oculta por defecto) */
+.link-animado::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Inicia sin ancho */
+  height: 2px; /* Grosor de la línea */
+  background-color: #0056b3; /* Color de la línea (un azul) */
+  transition: width 0.3s ease; /* La animación */
+}
+
+/* Al pasar el mouse por encima */
+.link-animado:hover {
+  color: #0056b3; /* Cambia el color del texto */
+}
+
+.link-animado:hover::after {
+  width: 100%; /* La línea crece al 100% del ancho */
+}
+
+.link-animado {
+  color: #333;
+  text-decoration: none;
+  display: inline-block; /* Necesario para que 'transform' funcione bien */
+  transition: transform 0.2s ease-out; /* La animación */
+}
+
+/* Al pasar el mouse por encima */
+.link-animado:hover {
+  transform: scale(1.1); /* Lo hace un 10% más grande */
+  color: #0056b3; /* También puedes cambiar el color */
+}
+
+/* Primero, definimos la animación de pulso */
+@keyframes pulso {
+  0% {
+    transform: scale(1); /* Tamaño normal */
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05); /* Un poco más grande */
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1); /* Vuelve al tamaño normal */
+    opacity: 1;
+  }
+}
+
+/* Se lo aplicamos a nuestro enlace */
+.link-animado {
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+  /* Aquí aplicamos la animación */
+  animation: pulso 2s infinite ease-in-out;
+}
+
+/* Opcional: que deje de pulsar al pasar el mouse */
+.link-animado:hover {
+  animation-play-state: paused; /* Pausa la animación */
+  color: #0056b3;
+}

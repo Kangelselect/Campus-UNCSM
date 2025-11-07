@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Guía Campus UNCSM</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <a href="../Acerca de Nosotros/index nosotros.html" class="link-animado">Acerca de Nosotros</a>
+  <header>
+    <h1>Universidad Nacional Casimiro Sotelo Montenegro</h1>
+    <p>Orientación dentro del campus</p>
+
+      <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Contacto</a>
+</div>
+
+  </header>
+
+<select id="destino">
+  <option value="">--Selecciona un destino--</option>
+  <option value="ingenieria">Ingeniería</option>
+  <option value="Biblioteca_Jose_Coronel_Urtecho">Biblioteca José Coronel Urtecho</option>
+  <option value="CanchaDeportiva_UCA">Cancha Deportiva</option>
+  <option value="kiosko_cheguevara">Kiosko Che Guevara</option>
+  <option value="Aula_Magna_UCA">Aula Magna</option>
+  <option value="Auditorio_Neysi_de_los_Angeles_Rios_Olivares">Auditorio Neysi de los Angeles Rios Olivares</option>
+  <option value="Food_Park">Food Park</option>
+  <option value="Edificio_N">Edificio N</option>
+  <option value="Rectoria_UNCSM">Rectoria UNCSM</option>
+</select>
+
+<button onclick="mostrarRuta()">Mostrar Ruta</button>
+<div id="map" style="height: 600px;"></div>
+
+  <div id="map"></div>
+
+  <footer>
+    <p>© UNCSM 2025 | Contacto: info@uncsm.edu.ni</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>
